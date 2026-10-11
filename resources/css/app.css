@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Outfit:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Material Surface Elevation styles */
+  .surface-card {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-md-1 hover:shadow-md-2 transition-all duration-200;
+  }
+  .surface-card-elevated {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-md-2 transition-all duration-200;
+  }
+  .btn-material-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary-600 text-white font-medium text-sm shadow-md-1 hover:bg-primary-700 hover:shadow-md-2 active:scale-95 transition-all duration-150 cursor-pointer;
+  }
+  .btn-material-tonal {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary-50 text-primary-700 font-medium text-sm hover:bg-primary-100 active:scale-95 transition-all duration-150 cursor-pointer;
+  }
+  .btn-material-outlined {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-slate-300 text-slate-700 font-medium text-sm hover:bg-slate-50 active:scale-95 transition-all duration-150 cursor-pointer;
+  }
+  .input-material {
+    @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-600 transition-all text-sm;
+  }
+  .badge-status {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+}
