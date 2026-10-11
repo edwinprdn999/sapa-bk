@@ -29,7 +29,7 @@
                     @foreach($logs as $log)
                         <tr class="hover:bg-slate-50/50">
                             <td class="p-4 text-slate-500">
-                                {{ $log->created_at ? $log->created_at->format('Y-m-d H:i:s') : '-' }}
+                                {{ $log->created_at ? \Carbon\Carbon::parse($log->created_at)->format('Y-m-d H:i:s') : '-' }}
                             </td>
                             <td class="p-4 font-sans font-semibold text-slate-900">
                                 {{ $log->user->name ?? 'Tamu / Sistem' }}

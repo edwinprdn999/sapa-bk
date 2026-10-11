@@ -105,7 +105,7 @@
                             <span class="font-semibold text-slate-800">{{ $log->action }}</span>
                             <div class="text-[11px] text-slate-400">{{ $log->entity_type }} #{{ $log->entity_id }} &bull; IP: {{ $log->ip_address }}</div>
                         </div>
-                        <span class="text-[10px] text-slate-400">{{ $log->created_at ? $log->created_at->diffForHumans() : '-' }}</span>
+                        <span class="text-[10px] text-slate-400">{{ $log->created_at ? \Carbon\Carbon::parse($log->created_at)->diffForHumans() : '-' }}</span>
                     </div>
                 @endforeach
             </div>
